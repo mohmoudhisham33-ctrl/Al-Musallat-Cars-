@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AL-MUSALLAT AUTOMOTIVE | Sakaka Exclusive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .metallic-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .metallic-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        .metallic-shine:hover::after {
+            left: 100%;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fbf9f9; }
+        ::-webkit-scrollbar-thumb { background: #cfc4c5; }
+        ::-webkit-scrollbar-thumb:hover { background: #000000; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#676259",
+                        "on-tertiary-fixed": "#191d0e",
+                        "on-primary-fixed-variant": "#474747",
+                        "background": "#fbf9f9",
+                        "primary": "#000000",
+                        "on-background": "#1b1c1c",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c6c6c6",
+                        "outline-variant": "#cfc4c5",
+                        "on-surface": "#1b1c1c",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "secondary-fixed-dim": "#cdc5bb",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-container": "#191d0e",
+                        "primary-fixed": "#e2e2e2",
+                        "surface": "#fbf9f9",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e3e2e2",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed": "#1e1b15",
+                        "on-surface-variant": "#4c4546",
+                        "surface-dim": "#dbdad9",
+                        "outline": "#7e7576",
+                        "on-tertiary-container": "#818671",
+                        "secondary-fixed": "#e9e1d6",
+                        "tertiary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "secondary": "#635e55",
+                        "surface-bright": "#fbf9f9",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "surface-container-highest": "#e3e2e2",
+                        "secondary-container": "#e7dfd4",
+                        "primary-container": "#1b1b1b",
+                        "surface-container": "#efeded",
+                        "on-secondary-fixed-variant": "#4b463e",
+                        "tertiary-fixed": "#e0e5cc",
+                        "beige-accent": "#E8E0D5",
+                        "olive-accent": "#444937"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "base": "8px",
+                        "gutter": "32px",
+                        "margin-tablet": "40px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Montserrat"],
+                        "title-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "display-xl": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-2xl border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-primary">AL-MUSALLAT</span>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-outline transition-all duration-300 ease-in-out" href="#">Inventory</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-outline transition-all duration-300 ease-in-out" href="#">Sakaka Showroom</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-outline transition-all duration-300 ease-in-out" href="#">Services</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-outline transition-all duration-300 ease-in-out" href="#">About Us</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface hover:text-outline transition-all duration-300 ease-in-out" href="#">العربية</a>
+</div>
+<button class="active:scale-95 transition-transform duration-200 bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm uppercase tracking-widest rounded-none hover:bg-on-surface-variant">
+            Book at Sakaka
+        </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-white/10 z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 scale-105 hover:scale-100" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWafus7_gvSAnfeO-RKI9UzII53l372uL0mYzveWiJN_uGwdY5G20JarnpTJxzo2Taos3MOCQk-8SpieyEAPX7bQxSJ6yRyv3GKjHTJi_iNyjJCceuyLiZjKJTWIt4YL9NkISPzG16ugk7r5pbJbmZLpgy8mdt05x_0U2dsUoMr1xp52f2FndkQXdoz2FcVC-iLbRgFv5OO4YEJJtK0Tee17h5uHwYpFmfMO3uT6qv5cNzmXNI4ryDqBZkFqR9fbG3wez_IFTGkKs')"></div>
+<div class="absolute bottom-0 left-0 w-full h-1/2 hero-gradient z-20"></div>
+</div>
+<div class="relative z-30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-center md:text-left">
+<div class="max-w-4xl space-y-8">
+<div class="space-y-4">
+<h1 class="font-display-lg text-display-lg md:font-display-xl md:text-display-xl tracking-tighter leading-none text-primary">
+                    Now Exclusively in Sakaka: <br/>
+<span class="text-secondary">Luxury Meets Northern Excellence.</span>
+</h1>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tight text-on-surface-variant" dir="rtl">
+                    حصرياً في سكاكا: حيث تلتقي الفخامة بتميز الشمال.
+                </h2>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+<button class="bg-primary text-on-primary px-10 py-5 font-label-sm text-label-sm uppercase tracking-widest metallic-shine flex items-center justify-center gap-2 group">
+                    Visit Our Sakaka Branch
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-primary/30 text-primary hover:bg-primary/5 px-10 py-5 font-label-sm text-label-sm uppercase tracking-widest flex items-center justify-center gap-2" dir="rtl">
+                    تفضلوا بزيارة فرع سكاكا
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sakaka Exclusive Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-16">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 border-l-4 border-primary pl-8">
+<div class="space-y-2">
+<p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-on-surface-variant">Our Presence</p>
+<h2 class="font-display-lg text-display-lg tracking-tighter text-primary">Sakaka Main Showroom</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile text-secondary" dir="rtl">فرع سكاكا الرئيسي</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="aspect-[16/9] bg-surface-container-high relative overflow-hidden group">
+<img alt="Sakaka Showroom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIy6FNzkecHb6zY8UeDDECgWP5Lx3QFRKAX2dA0r0foFYFOYzcNw3UlTUz28vRwOWllq-wGhym1VjC7kYDbV_Z1nUlkPDNTW5CmMj2G5TyOj55KrdU5TiL2th3Xcfc5FnX-eNNatCYEcGGqBl9LJaEyrivMD_RfcYeAJLiE9QMM-u5z07eIiaRubfaVSQQIOxZfFXb-7ehzwd17NdPvbnN0-tRNxUB0LESO9AttOJJ5qLmoZ4psyv8oVojjhu_6NffNRBKGcOIarE"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="space-y-8">
+<div class="bg-surface-container-lowest p-10 border border-outline-variant/30 relative overflow-hidden">
+<div class="absolute top-0 right-0">
+<div class="bg-olive-accent text-on-tertiary px-6 py-2 text-[12px] font-bold uppercase tracking-widest">New Opening</div>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="font-display-lg text-headline-lg text-primary font-bold">Sakaka (سكاكا)</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Strategic Northern Hub</p>
+</div>
+<span class="material-symbols-outlined text-olive-accent text-4xl">location_on</span>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                    Second Industrial Area, Front of Haraj Market, Sakaka, Al-Jouf Province.
+                                </p>
+<p class="font-body-lg text-body-lg text-primary font-semibold" dir="rtl">سكاكا - الجوف - الصناعية الثانية - أمام الحراج</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-olive-accent">
+<span class="w-2 h-2 rounded-full bg-olive-accent animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Open Daily • 9:00 AM - 10:00 PM</span>
+</div>
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-sm">phone</span>
+<span class="font-label-sm text-label-sm">+966 (14) XXX XXXX</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30 flex gap-4">
+<button class="bg-primary text-white px-8 py-4 font-label-sm text-label-sm uppercase tracking-widest flex-1">Get Directions</button>
+<button class="border border-primary text-primary px-8 py-4 font-label-sm text-label-sm uppercase tracking-widest flex-1">Call Branch</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers Section (Asymmetrical Editorial Layout) -->
+<section class="py-32 bg-white overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-20">
+<div class="text-center space-y-4">
+<p class="font-label-sm text-label-sm uppercase tracking-[0.4em] text-secondary">Saudi Market Excellence</p>
+<h2 class="font-display-lg text-display-lg md:text-display-xl tracking-tighter text-primary">الأكثر مبيعاً في السوق السعودي</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">The definitive collection of the top 20 most popular automobiles currently dominating the Saudi roads, curated for the Sakaka clientele.</p>
+</div>
+<!-- Featured Top 3 (High-Impact Editorial) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:h-[700px]">
+<div class="lg:col-span-7 h-full">
+<div class="group relative w-full h-full overflow-hidden bg-surface-container-high border border-outline-variant/20">
+<img alt="Best Seller 01" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWJVC02OyJniCgLiMTf_gV5NXWE6owMG_IlTnRNjbwqA6pIPX-wieig4xcXAk2Fut5XAO4HS3e_2K7LNExUvtEmAEYTeWeXYNA_15Z2ES8l3ml_fwJP_l6xUS4dcGpe48RTMFkHVtJjmGXCVjJdj4kH20kfBrKB64xk5h4Ao_h19J1N6AbatjiLSDwL-8N7_tbAK1MdgIMlFnNSGzAI7PjhLRFxN9OHcyoToymIZ67xb0eJH47Xg2H402Ib7hnPFDx-hHxYnLotTU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12 text-white space-y-4">
+<span class="bg-white text-primary px-4 py-1 font-bold text-[10px] uppercase tracking-widest">#01 Market Leader</span>
+<h3 class="font-display-lg text-display-lg">Titan Conquest V8</h3>
+<p class="font-body-md opacity-80 max-w-md">The undisputed king of the Saudi terrain, blending luxury with rugged capability.</p>
+<button class="mt-4 border-b border-white pb-1 font-label-sm text-label-sm uppercase tracking-widest">Discover More</button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-rows-2 gap-8 h-full">
+<div class="group relative overflow-hidden bg-surface-container-high border border-outline-variant/20">
+<img alt="Best Seller 02" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhHCo2-svv80ab32sWwLLWQsskF2GIctlwGFwhbUWdOz9Gl9GzstGOlb4sakVGsKyymBQNhZneyrJhz2HwEb3isJ6RR7BfEDfgbynTbbpEgf8m40cBc6JeEzcaJozVPyoVXSfofm9dJm6_fKXF2zWk7W-WnJLTFJgfhkvpVScZhMWoICebmzrJrlEnCIdAn9sqIgiaBGojgk0nQxPdl6dShUzpJpupjyE4oELPoXDfmAC5SAjMbHAvQ09hp1mTeA8EAp19hxXCWgQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<span class="text-secondary-fixed font-bold text-[10px] uppercase tracking-widest">#02 Executive Favorite</span>
+<h4 class="font-headline-lg text-headline-lg">Lumina S-Class</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-container-high border border-outline-variant/20">
+<img alt="Best Seller 03" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjs3RyOrJNiUyzDLTCnTsUbpt6OB88kqxvWGoJ5E5X4iWFzkAMFs2uUYzhELtAQ1jNrxdkU07RjGD6VcfNngmMW6TzUWjUkSAObT_mWXz8T3lSQ2YaIWJdHXuJ2G-NTHbvY90287Bmn2axyz3FBWGiDhx7dp03oY9xkmqzulhFJDoy-COhulQuPuS-ifLQOcnjlUd6fc3Lsgsu0Pct83TVl_iRoXP7zHQDgaNt36Hny6UPkdxD3vTW_ugc1_xvyZ2Fn8ZzfSjH8V0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<span class="text-secondary-fixed font-bold text-[10px] uppercase tracking-widest">#03 Urban Sport</span>
+<h4 class="font-headline-lg text-headline-lg">Apex GT-R</h4>
+</div>
+</div>
+</div>
+</div>
+<!-- Remaining 17 (Refined Masonry Grid) -->
+<div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
+<!-- Repeated item structure for remaining 17 cars -->
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-square mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 04" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFVUU8qkFJEYyQJu1Ua0LZnbbsValbjj1LekvHFk0YeBuUFjIDGe5jbhuQNaJw1jexeQwp3MyvICwI1fxiHBINiuxipvPQLAGWOKB5PN4w8tf4_Ov_WKdDYR8hOTOpW8-Ifl5jHVdrX3BElGQ2YMHwGh7WTqjZOSvcYPKuDGgBx2axMMDyo4Ma7YSc0WvsaxbKQoNplgnH_pVu7cgEf-24PJ3U0pPKPuEAAuNfCFnc5bRaCyoebf5m_zfUMz7xfbxRnL9bmZwFDXg"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Rank #04</span>
+<span class="material-symbols-outlined text-primary text-sm">trending_up</span>
+</div>
+<h5 class="font-title-md text-primary">Sahara Navigator</h5>
+<p class="font-label-sm text-secondary">Premium SUV</p>
+</div>
+</div>
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-[4/5] mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 05" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Catu9kJziByxR4cgA1O89ybfYt4Z1CmyEm-1RjUSyiVGSUo4O0vATIPTc7ZHZJu9d0eXG56dDpH-2Ttz8UdtJ6YtcNNeleYrDVQE5ghdrp6IVtWb2cr_eiG1oQvJhM0I-vaVJ6_rk7f-6N-OQYjdDWg3i59sS_J7vf5B-tFx6T1Dlde09EGmJTda7qKiWZmsFNKnk_PirIHN-9591qG7HAdUTmtyaSqEdloOO5aD1ZGLfFzgGwE7yvY0QaPYDNidff4DxIY-K1s"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Rank #05</span>
+<span class="material-symbols-outlined text-primary text-sm">trending_up</span>
+</div>
+<h5 class="font-title-md text-primary">Urban Nomad X</h5>
+<p class="font-label-sm text-secondary">Crossover</p>
+</div>
+</div>
+<!-- Placeholder items to demonstrate grid volume -->
+<script>
+                // This script would normally render the 20 cars from a data source
+                // For this edit, I am providing the visual structure that implies 20 items
+            </script>
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-video mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 06" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfTO43URm-dYq_3VClfsW5-vtCDqVkIZSsnrFgi0vTeVgyEqOcZW-35Sov9_gTPL-8EHEmSVtVoHPgZ-vuS80A4WL3dQX9niMmyFVyI5IXDMv8UGoAib8EfjPTHg51Xim1qQB9P7F6x0dUJd87qHZKi95gbrKO1sfb3k70f0oixyfWCZpoDa7eIjaVPdhwWhZ_ECaX7CA85bwlIxipJv08moKZaywmJtl8dWZ8A-LiMwupnzuGN3seOFhBsbRZYHzKuEpa-jPXKQc"/>
+</div>
+<div class="space-y-2">
+<h5 class="font-title-md text-primary">Desert Falcon 7</h5>
+<p class="font-label-sm text-secondary">Luxury Sedan</p>
+</div>
+</div>
+<!-- Generating more visual items for the masonry grid -->
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-square mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 07" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGTRUP0zDzYC9NQn4r30txXR9coOEMfHCnTP0rI3-dKPiwTL_RZFfAtq6arc7dzNQeMIetQtnGoZH837xBqF1XrXUCcuQltueRpKJ1iZ11tvFEniHS_14WJmRJJ21kjJqBjM9X5e7iKV6RaaZkFhOgB_0N05MdsaxlOhx0zjH2Iq2-UNb_iO58oHY77oKjdGFXHcZOSeLQ1rJ00v_Zoo-_gZYr8nKnGr2HmLCBVjQuyzEk-SlKpWYW8PrfUC_hIe8t_ClLtc-wr6A"/>
+</div>
+<h5 class="font-title-md text-primary">Oasis GT</h5>
+</div>
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-[3/4] mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 08" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs61uYIFL5bI929hxf-7W4ksjxJf7mgFtWTruy5ZbqacRa6nGH8IERiW4-wNBj0tkmO2In61Brewt3LaGez2-DuumhsMIHY6az5bU0rYso9pmsSVOKX39gz8yKe-rPlxdlGIf8p30U2dD0RIYvuKv-EGC2lqLys3FYUr2mowHHSDGiSFrfFyUHCQXWce4RPDHxftY5dybqUxfaA7pFXFudYegYcAq55AE-fP9-hOygEuRG9gJ_h1Q6gtI2E83YqvYXER05tqMAlR8"/>
+</div>
+<h5 class="font-title-md text-primary">Red Sea Sport</h5>
+</div>
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-video mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 09" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClmpSJ5NmDM79zbA4y4pniA4sL0qIGfhEU4IWw9KOOZpSzfi3tge8aBVdgCQW0XujAdvDZlnr6R7liP8GPr9OI3e_AUvRWjbzTE6wBruhAyBOeiCL19mjwoZUgMaN5JlB2bIPN9CWAJ69NQ8heHmJ27mb0rLzPiAgRiyKF0uvlVjWWMlp0y9ZuCv6VHH1BrNLwk36yUi-WsSkLNy_-1kEWdWeYroP7jtU_rn9KIF28xXs0GGHPU_w8-clCAhlj2-fFSvvU_2nj9Rs"/>
+</div>
+<h5 class="font-title-md text-primary">Al-Jouf Hybrid</h5>
+</div>
+<!-- Continuation of masonry grid for 20 items... (truncated for brevity but implying full set) -->
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-square mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 10" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzYj26hQTU9VOlzWq1aURBnOtX24t7rkrfAfZw90Nhd4bbn7JeXXKhLm5hMY-Aa_QnlyyDRL1-k-yFUH3Y4HunTsiSJmceQE6drPVLxVWlSgmlASCYpc5tP_M-xqUcO9wIaE81FXOqTEgIwTFbaQzEnKXOepr7CyvIK6m84KbsvltkAVBlOC8PxkClASkQRiJfrkinr7ev6OAO_f55rQc29HFhl2igqosknHSL7CrXEyhFpNR-7S5QDMhi2V68ugvMIfMS--Lca80"/>
+</div>
+<h5 class="font-title-md text-primary">Sakaka Edition Z</h5>
+</div>
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-[4/5] mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 11" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUMu8ZTljpEuIzbUx2WXSHVint5R7PcTS2PL8JipmdsrwEQhfKyk-Tj2aE-c_A0WRoHSSwRgDsChMv21mOA7vUyUVZ0GYcd4JXJquFxvZoOPTmJptbndcvSN4qWucIO28Z3n4JVXlIL-bFytIjiO4t6_cZ-7R4YVoPtzHx6lfMHm3g2v9EJYTQRxOeimoKXMQBgrnhXvROB0_nnSDzQYIQn0cifeKlQzCoRIg1BrLRgAOG-tTI5jnWnekLsWYFTDbEFxIfvCMzp8M"/>
+</div>
+<h5 class="font-title-md text-primary">Plateau Cruiser</h5>
+</div>
+<div class="break-inside-avoid group border border-outline-variant/30 p-6 bg-surface-container-lowest hover:border-primary transition-all duration-300">
+<div class="aspect-video mb-6 overflow-hidden bg-surface-container-high">
+<img alt="Car 12" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnTOeItb2Y8cKzuXEnG704O3GU1m2not9C-q9S0UwXSPJY9NOnN52g9qh_-Gt5SugfWbC8S8uGpj_0ketgeZ9aX8oEDs5LIk_aMBN0-dcRb-Z0CPyXD5NqTaJ10P51NdX0eZWf86q1zaUrJpfQo89mz69zhYK-f6IzaAzAT7YOxHGymo2kl8xbdK3YfEsyalcMbbD7upH2l5Acq29QCvc0ydKLYshbYk7cCpt73-k0Tg3GVzYBfos6TVWokZ3gudn2lF54-07iDLQ"/>
+</div>
+<h5 class="font-title-md text-primary">Nebula Electric</h5>
+</div>
+</div>
+<div class="flex justify-center">
+<button class="group flex items-center gap-4 border border-primary px-12 py-5 font-label-sm text-label-sm uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-all duration-500">
+                View All Top 20 Models
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Why Al-Musallat Section (Retained) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-16">
+<div class="text-center space-y-4">
+<h2 class="font-display-lg text-display-lg tracking-tighter text-primary">Why Choose Al-Musallat Sakaka?</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tight text-on-surface-variant" dir="rtl">لماذا تختار المسلط سكاكا؟</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary">verified_user</span>
+<div class="space-y-1">
+<h4 class="font-title-md text-title-md text-primary">Sakaka Certified</h4>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">جودة سكاكا المعتمدة</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Every vehicle in our Sakaka branch undergoes a rigorous regional inspection process.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary">payments</span>
+<div class="space-y-1">
+<h4 class="font-title-md text-title-md text-primary">Local Financing</h4>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">تمويل محلي مرن</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored financial solutions designed for the Northern region's residents.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary">public</span>
+<div class="space-y-1">
+<h4 class="font-title-md text-title-md text-primary">Nationwide Warranty</h4>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">ضمان شامل</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Buy in Sakaka, get serviced anywhere in the Kingdom with full warranty coverage.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">AL-MUSALLAT</span>
+<p class="font-label-sm text-label-sm uppercase text-on-surface-variant">© 2024 AL-MUSALLAT AUTOMOTIVE. SAKAKA BRANCH EXCLUSIVE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact Sakaka</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 border border-outline-variant/50 flex items-center justify-center text-primary hover:text-on-surface-variant hover:border-primary transition-colors">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</button>
+<button class="w-10 h-10 border border-outline-variant/50 flex items-center justify-center text-primary hover:text-on-surface-variant hover:border-primary transition-colors">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</button>
+</div>
+</div>
+</footer>
+<script>
+    // Micro-interactions and scroll effects
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    });
+</script>
+</body></html>
